@@ -1,4 +1,4 @@
-var friends = require("../data/tableData");
+var friends = require("../data/friends");
 
 
 module.exports = function(app) {
@@ -12,9 +12,9 @@ app.post("/api/friends", function(req, res) {
 	var friend = req.body;
 	friends.push(friend);
 	res.json(friend);
-}
+});
 
-}
+};
 
 
 
