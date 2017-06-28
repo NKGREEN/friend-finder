@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<title>FRIEND FINDER</title>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+			<h1>FRIEND FINDER</h1>
+			<br>
+
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title"><strong>Start survey</strong></h3>
+					</div>
+					<div class="panel-body">
+						<form method="POST" role="form">
+
+							<div class="form-group">
+								<label for="name">Enter your name:</label>
+								<input type="text" class="form-control" id="name">
+							</div>
+
+							<label for="photo">Enter a url to your photo:</label>
+								<input type="text" class="form-control" id="photo">
+							</div>
+
+								<label for="q1">QUESTION 1</label>
+								<input type="radio" value="1" name="question1" class="q1">1
+								<input type="radio" value="2" name="question1" class="q1">2
+								<input type="radio" value="3" name="question1" class="q1">3
+								<input type="radio" value="4" name="question1" class="q1">4
+								<input type="radio" value="5" name="question1" class="q1">5
+
+							</div>
+
+							<div class="form-group">
+								<label for="q2">QUESTION 2</label>
+								<input type="radio" value="1" name="question2" class="q2">1
+								<input type="radio" value="2" name="question2" class="q2">2
+								<input type="radio" value="3" name="question2" class="q2">3
+								<input type="radio" value="4" name="question2" class="q2">4
+								<input type="radio" value="5" name="question2" class="q2">5
+							</div>
+
+							<div class="form-group">
+								<label for="q3">QUESTION 3</label>
+								<input type="radio" value="1" name="question3" class="q3">1
+								<input type="radio" value="2" name="question3" class="q3">2
+								<input type="radio" value="3" name="question3" class="q3">3
+								<input type="radio" value="4" name="question3" class="q3">4
+								<input type="radio" value="5" name="question3" class="q3">5
+							</div>
+
+							<div class="form-group">
+								<label for="q4">QUESTION 4</label>
+								<input type="radio" value="1" name="question4" class="q4">1
+								<input type="radio" value="2" name="question4" class="q4">2
+								<input type="radio" value="3" name="question4" class="q4">3
+								<input type="radio" value="4" name="question4" class="q4">4
+								<input type="radio" value="5" name="question4" class="q4">5
+							</div>
+							<div class="form-group">
+								<label for="q5">QUESTION 5</label>
+								<input type="radio" value="1" name="question5" class="q5">1
+								<input type="radio" value="2" name="question5" class="q5">2
+								<input type="radio" value="3" name="question5" class="q5">3
+								<input type="radio" value="4" name="question5" class="q5">4
+								<input type="radio" value="5" name="question5" class="q5">5
+							</div>
+							<div class="form-group">
+								<label for="q6">QUESTION 6</label>
+								<input type="radio" value="1" name="question6" class="q6">1
+								<input type="radio" value="2" name="question6" class="q6">2
+								<input type="radio" value="3" name="question6" class="q6">3
+								<input type="radio" value="4" name="question6" class="q6">4
+								<input type="radio" value="5" name="question6" class="q6">5
+							</div>
+							<div class="form-group">
+								<label for="q7">QUESTION 7</label>
+								<input type="radio" value="1" name="question7" class="q7">1
+								<input type="radio" value="2" name="question7" class="q7">2
+								<input type="radio" value="3" name="question7" class="q7">3
+								<input type="radio" value="4" name="question7" class="q7">4
+								<input type="radio" value="5" name="question7" class="q7">5
+							</div>
+							<div class="form-group">
+								<label for="q8">QUESTION 8</label>
+								<input type="radio" value="1" name="question8" class="q8">1
+								<input type="radio" value="2" name="question8" class="q8">2
+								<input type="radio" value="3" name="question8" class="q8">3
+								<input type="radio" value="4" name="question8" class="q8">4
+								<input type="radio" value="5" name="question8" class="q8">5
+							</div>
+
+							<div class="form-group">
+								<label for="q9">QUESTION 9</label>
+								<input type="radio" value="1" name="question9" class="q9">1
+								<input type="radio" value="2" name="question9" class="q9">2
+								<input type="radio" value="3" name="question9" class="q9">3
+								<input type="radio" value="4" name="question9" class="q9">4
+								<input type="radio" value="5" name="question9" class="q9">5
+							</div>
+
+							<div class="form-group">
+								<label for="q10">QUESTION 10</label>
+								<input type="radio" value="1" name="question10" class="q10">1
+								<input type="radio" value="2" name="question10" class="q10">2
+								<input type="radio" value="3" name="question10" class="q10">3
+								<input type="radio" value="4" name="question10" class="q10">4
+								<input type="radio" value="5" name="question10" class="q10">5
+							</div>
+
+						</form>
+
+				
+					<button type="submit" id="submitBtn">BEGIN</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+$(".submit").on("click", function (event) {
+	event.preventDefault();
+	var scores = {
+		question1: $("input[name='question1':checked").val().trim(),
+		question2:  $("input[name='question2':checked").val().trim(),
+		question3:  $("input[name='question3':checked").val().trim(),
+		question4: $("input[name='question4':checked").val().trim(),
+		question5: $("input[name='question5':checked").val().trim(),
+		question6: $("input[name='question6':checked").val().trim(),
+		question7: $("input[name='question7':checked").val().trim(),
+		question8: $("input[name='question8':checked").val().trim(),
+		question9: $("input[name='question9':checked").val().trim(),
+		question10: $("input[name='question10':checked").val().trim(),
+	}
+	var newFriend = {
+		name: $("#name").val().trim(),
+		photo: $('#photo').val().trim(),
+		scores: [scores.question1, scores.question2, scores.question3, scores.question4, scores.question5, scores.question6, scores.question7, scores.question8, scores.question9, scores.question10];
+	}
+	console.log(newFriend);
+
+	$.post("/api/friends", newFriend,
+		function(data) {
+			console.log('ok')
+		});
+	
+	runFriendsQuery();	
+})
+
+function runFriendsQuery (){
+		var currentURL = window.location.origin;
+
+		$.ajax({ url: currentURL = "/api/friends", method: "GET"}).done(function(tableData){
+			console.log(currentURL);
+			console.log(tableData);
+		})
+	};
+
+
+</script>
