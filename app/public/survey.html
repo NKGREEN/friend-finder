@@ -1,208 +1,193 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8>"
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+    <meta charset="utf-8>" <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <title>FRIEND FINDER</title>
+    <style>
+    body {
+        background-image: url(http://wallpapercave.com/wp/876BfVo.png)
+    }
     
-	<title>FRIEND FINDER</title>
-	<style>
-		body {
-			background-image: url(http://wallpapercave.com/wp/876BfVo.png)
-
-		}
-		h1 {
-			color: lightgray;
-			font-family: 'Times New Roman';
-		}
-		#submitBtn {
-			
-			margin-bottom: 20px;
-		}
-		#friendPhoto {
-			width: auto;
-			height: auto;
-		}
-	</style>
-
+    h1 {
+        color: lightgray;
+        font-family: 'Times New Roman';
+    }
+    
+    #submitBtn {
+        margin-bottom: 20px;
+    }
+    
+    #friendPhoto {
+        width: auto;
+        height: auto;
+    }
+    </style>
 </head>
 
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-			<h1 class="text-center">TWIN PEAKS FRIEND FINDER</h1>
-			<br>
-
-
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title"><strong>Answer the questions openly and honestly...</strong></h3>
-					</div>
-					<div class="panel-body">
-						<form method="POST" role="form">
-
-							<div class="form-group">
-								<label for="name">Enter your name:</label>
-								<input type="text" class="form-control" id="name" class="textinput">
-							</div>
-
-							<div class="form-group">
-							<label for="photo">Enter a url to your photo:</label>
-								<input type="text" class="form-control" id="photo" class="textinput">
-							</div>
-
-							<div class="form-group">
-							<label for="photo">Enter a short description of yourself:</label>
-								<input type="text" class="form-control" id="bio" class="textinput">
-							</div>
-
-
-							<div class="form-group">
-								<label for="q1">1.) I see myself as extraverted, enthusiastic.</label>
-								<select id="q1">
-									<option value="" disabled selected>Select an option</option>
-									<option value="1">1 (Strongly Disagree)</option>
-									<option value="2">2 (Slightly Disagree)</option>
-									<option value="3">3 (Neutral)</option>
-									<option value="4">4 (Slightly Agree)</option>
-									<option value="5">5 (Strongly Agree)</option>
-								</select>
-								
-
-							</div>
-
-							<div class="form-group">
-								<label for="q2">2.) I see myself as critical, quarrelsome.</label>
-								<select id="q2">
-									<option value="" disabled selected>Select an option</option>
-									<option value="1">1 (Strongly Disagree)</option>
-									<option value="2">2 (Slightly Disagree)</option>
-									<option value="3">3 (Neutral)</option>
-									<option value="4">4 (Slightly Agree)</option>
-									<option value="5">5 (Strongly Agree)</option>
-								</select>
-							</div>
-
-							<div class="form-group">
-								<label for="q3">3.) I see myself as dependable, self-disciplined.</label>
-								<select id="q3">
-									<option value="" disabled selected>Select an option</option>
-									<option value="1">1 (Strongly Disagree)</option>
-									<option value="2">2 (Slightly Disagree)</option>
-									<option value="3">3 (Neutral)</option>
-									<option value="4">4 (Slightly Agree)</option>
-									<option value="5">5 (Strongly Agree)</option>
-								</select>
-							</div>
-
-							<div class="form-group">
-								<label for="q4">4.) I see myself as anxious, easily upset.</label>
-								<select id="q4">
-									<option value="" disabled selected>Select an option</option>
-									<option value="1">1 (Strongly Disagree)</option>
-									<option value="2">2 (Slightly Disagree)</option>
-									<option value="3">3 (Neutral)</option>
-									<option value="4">4 (Slightly Agree)</option>
-									<option value="5">5 (Strongly Agree)</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label for="q5">5.) I see myself as open to new experiences, complex.</label>
-								<select id="q5">
-									<option value="" disabled selected>Select an option</option>
-									<option value="1">1 (Strongly Disagree)</option>
-									<option value="2">2 (Slightly Disagree)</option>
-									<option value="3">3 (Neutral)</option>
-									<option value="4">4 (Slightly Agree)</option>
-									<option value="5">5 (Strongly Agree)</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label for="q6">6.) I see myself as reserved, quiet.</label>
-								<select id="q6">
-									<option value="" disabled selected>Select an option</option>
-									<option value="1">1 (Strongly Disagree)</option>
-									<option value="2">2 (Slightly Disagree)</option>
-									<option value="3">3 (Neutral)</option>
-									<option value="4">4 (Slightly Agree)</option>
-									<option value="5">5 (Strongly Agree)</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label for="q7">7.) I see myself as sympathetic, warm.</label>
-								<select id="q7">
-									<option value="" disabled selected>Select an option</option>
-									<option value="1">1 (Strongly Disagree)</option>
-									<option value="2">2 (Slightly Disagree)</option>
-									<option value="3">3 (Neutral)</option>
-									<option value="4">4 (Slightly Agree)</option>
-									<option value="5">5 (Strongly Agree)</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label for="q8">8.) I see myself as disorganized, careless.</label>
-								<select id="q8">
-									<option value="" disabled selected>Select an option</option>
-									<option value="1">1 (Strongly Disagree)</option>
-									<option value="2">2 (Slightly Disagree)</option>
-									<option value="3">3 (Neutral)</option>
-									<option value="4">4 (Slightly Agree)</option>
-									<option value="5">5 (Strongly Agree)</option>
-								</select>
-							</div>
-
-							<div class="form-group">
-								<label for="q9">9.) I see myself as calm, emotionally stable.</label>
-								<select id="q9">
-									<option value="" disabled selected>Select an option</option>
-									<option value="1">1 (Strongly Disagree)</option>
-									<option value="2">2 (Slightly Disagree)</option>
-									<option value="3">3 (Neutral)</option>
-									<option value="4">4 (Slightly Agree)</option>
-									<option value="5">5 (Strongly Agree)</option>
-								</select>
-							</div>
-
-							<div class="form-group">
-								<label for="q10">10.) I see myself as conventional, uncreative.</label>
-								<select id="q10">
-									<option value="" disabled selected>Select an option</option>
-									<option value="1">1 (Strongly Disagree)</option>
-									<option value="2">2 (Slightly Disagree)</option>
-									<option value="3">3 (Neutral)</option>
-									<option value="4">4 (Slightly Agree)</option>
-									<option value="5">5 (Strongly Agree)</option>
-								</select>
-							</div>
-
-						</form>
-					</div>
-					<div class="text-center">
-					<button type="submit" class="btn-danger" id="submitBtn">SUBMIT?</button></div>
-				</div>
-			</div>
-		</div>
-	<div id="friendModal" class="modal" >
-	<div class="modal-dialog">
-		<div class="modal-content"">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="text-center">TWIN PEAKS FRIEND FINDER</h1>
+                <br>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>Answer the questions openly and honestly...</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        <form method="POST" role="form">
+                            <div class="form-group">
+                                <label for="name">Enter your name:</label>
+                                <input type="text" class="form-control" id="name" class="textinput">
+                            </div>
+                            <div class="form-group">
+                                <label for="photo">Enter a url to your photo:</label>
+                                <input type="text" class="form-control" id="photo" class="textinput">
+                            </div>
+                            <div class="form-group">
+                                <label for="photo">Enter a short description of yourself:</label>
+                                <input type="text" class="form-control" id="bio" class="textinput">
+                            </div>
+                            <div class="form-group">
+                                <label for="q1">1.) I see myself as extraverted, enthusiastic.</label>
+                                <select id="q1">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Slightly Disagree)</option>
+                                    <option value="3">3 (Neutral)</option>
+                                    <option value="4">4 (Slightly Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="q2">2.) I see myself as critical, quarrelsome.</label>
+                                <select id="q2">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Slightly Disagree)</option>
+                                    <option value="3">3 (Neutral)</option>
+                                    <option value="4">4 (Slightly Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="q3">3.) I see myself as dependable, self-disciplined.</label>
+                                <select id="q3">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Slightly Disagree)</option>
+                                    <option value="3">3 (Neutral)</option>
+                                    <option value="4">4 (Slightly Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="q4">4.) I see myself as anxious, easily upset.</label>
+                                <select id="q4">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Slightly Disagree)</option>
+                                    <option value="3">3 (Neutral)</option>
+                                    <option value="4">4 (Slightly Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="q5">5.) I see myself as open to new experiences, complex.</label>
+                                <select id="q5">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Slightly Disagree)</option>
+                                    <option value="3">3 (Neutral)</option>
+                                    <option value="4">4 (Slightly Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="q6">6.) I see myself as reserved, quiet.</label>
+                                <select id="q6">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Slightly Disagree)</option>
+                                    <option value="3">3 (Neutral)</option>
+                                    <option value="4">4 (Slightly Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="q7">7.) I see myself as sympathetic, warm.</label>
+                                <select id="q7">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Slightly Disagree)</option>
+                                    <option value="3">3 (Neutral)</option>
+                                    <option value="4">4 (Slightly Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="q8">8.) I see myself as disorganized, careless.</label>
+                                <select id="q8">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Slightly Disagree)</option>
+                                    <option value="3">3 (Neutral)</option>
+                                    <option value="4">4 (Slightly Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="q9">9.) I see myself as calm, emotionally stable.</label>
+                                <select id="q9">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Slightly Disagree)</option>
+                                    <option value="3">3 (Neutral)</option>
+                                    <option value="4">4 (Slightly Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="q10">10.) I see myself as conventional, uncreative.</label>
+                                <select id="q10">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Slightly Disagree)</option>
+                                    <option value="3">3 (Neutral)</option>
+                                    <option value="4">4 (Slightly Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn-danger" id="submitBtn">SUBMIT?</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="friendModal" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content" ">
 
 			
-			<div class="modal-body text-center">
+			<div class="modal-body text-center ">
 			
 				
-				<h4 class="modal-title">YOUR MATCH:</h4>
+				<h4 class="modal-title ">YOUR MATCH:</h4>
 
 			
-				<h5 id="friendName" class="text-center"></h5>
-				<img src="" class="img-responive text-center" id="friendPhoto">
-				<p id="friendBio" class="text-center"></p>
+				<h5 id="friendName " class="text-center "></h5>
+				<img src=" " class="img-responive text-center " id="friendPhoto ">
+				<p id="friendBio " class="text-center "></p>
 			</div>
-			<div class="modal-footer">
-				<button type="button" class="modal-action modal-close" data-dismiss="modal">Close</button>
+			<div class="modal-footer ">
+				<button type="button " class="modal-action modal-close " data-dismiss="modal ">Close</button>
 			</div>
 		</div>
 	</div>
@@ -212,14 +197,14 @@
 
 </body>
 
-<script type="text/javascript">
+<script type="text/javascript ">
 window.onload = (function() {
 
 
 var formComplete;
 
 
-$("#submitBtn").on("click", function (event) {
+$("#submitBtn ").on("click ", function (event) {
 	event.preventDefault();
 
 	validation();
@@ -227,7 +212,7 @@ $("#submitBtn").on("click", function (event) {
 
 	if (formComplete === true) {
 	var newFriend = {
-		name: $("#name").val().trim(),
+		name: $("#name ").val().trim(),
 		photo: $('#photo').val().trim(),
 		scores: [$('#q1').val(), $('#q2').val(), $('#q3').val(), $('#q4').val(), $('#q5').val(), $('#q6').val(), $('#q7').val(), $('#q8').val(), $('#q9').val(), $('#q10').val(),],
 		bio: $('#bio').val().trim()
@@ -236,7 +221,7 @@ $("#submitBtn").on("click", function (event) {
 
 	var url = window.location.origin;
 
-	$.post(url+"/api/friends", newFriend,
+	$.post(url+"/api/friends ", newFriend,
 		function(data) {
 			console.log('ok');
 			$('#friendName').text(data.name);
@@ -247,7 +232,7 @@ $("#submitBtn").on("click", function (event) {
 		});
 }
 	else {
-		console.log('Please complete all fields to get the most accurate result.');
+		alert('Please complete all fields to get the most accurate result.');
 	}
 	
 	
@@ -261,7 +246,7 @@ function validation () {
 	formComplete = true;
 
 		$('.textinput').each(function(){
-			if($(this).val() === "") {
+			if($(this).val() === " ") {
 					formComplete = false;
 			}
 
@@ -278,4 +263,3 @@ function validation () {
 
 </script>
 </html>
-
