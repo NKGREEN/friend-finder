@@ -15,7 +15,7 @@ var friends = [
 {
 	"name": "Audrey Horne",
 	"photo": "https://media.giphy.com/media/bZ8yF53offo7S/giphy.gif",
-	"scores": [3, 3, 2, 2, 5, 3, 3, 3, 4, 2],
+	"scores": [3, 2, 2, 1, 5, 3, 3, 3, 5, 1],
 	"bio": "Hope you like dancin' ooh la la."
 },
 {
