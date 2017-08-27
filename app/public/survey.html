@@ -198,18 +198,22 @@
 </body>
 
 <script type="text/javascript ">
+
+// functionality starts when window loads
 window.onload = (function() {
 
 
 var formComplete;
 
-
+// submit button on click function
 $("#submitBtn ").on("click ", function (event) {
+    // prevents default event
 	event.preventDefault();
 
+    // validation function runs (see below) to confirm user has filled out all information
 	validation();
 
-
+    // if page has been completely filled out, then new friend variable is created with information submitted in the appropiate divs
 	if (formComplete === true) {
 	var newFriend = {
 		name: $("#name ").val().trim(),
@@ -217,10 +221,15 @@ $("#submitBtn ").on("click ", function (event) {
 		scores: [$('#q1').val(), $('#q2').val(), $('#q3').val(), $('#q4').val(), $('#q5').val(), $('#q6').val(), $('#q7').val(), $('#q8').val(), $('#q9').val(), $('#q10').val(),],
 		bio: $('#bio').val().trim()
 	}
+
+    // this user submitted information is console logged
 	console.log(newFriend);
 
+    // variable that takes currect html link
 	var url = window.location.origin;
 
+
+    // post function to friends API
 	$.post(url+"/api/friends ", newFriend,
 		function(data) {
 			console.log('ok');
@@ -231,6 +240,7 @@ $("#submitBtn ").on("click ", function (event) {
 
 		});
 }
+    // User is alerted to complete all information
 	else {
 		alert('Please complete all fields to get the most accurate result.');
 	}
@@ -241,10 +251,11 @@ $("#submitBtn ").on("click ", function (event) {
 
 
 
-
+// validation function to ensure a completed document is submitted
 function validation () {
 	formComplete = true;
 
+        // each value of text input is checked for written content, if there is none form completed variable is false
 		$('.textinput').each(function(){
 			if($(this).val() === " ") {
 					formComplete = false;
@@ -252,6 +263,7 @@ function validation () {
 
 		});
 
+        // each survey option is checked for a selected value, if there is an incoplete value then form complete variable is not complete.
 		$('select').each(function() {
 			if($(this).val() === null) {
 				formComplete = false;

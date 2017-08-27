@@ -1,3 +1,5 @@
+
+// Default Twin Peaks friends
 var friends = [{
         "name": "Leo Johnson",
         "photo": "https://media.giphy.com/media/3ohzdCVQJuxOG4c716/giphy.gif",
@@ -52,32 +54,51 @@ var friends = [{
 
 
 ];
+
+// exports list of friends
 exports.friends = friends;
 
+// find match function exported
 exports.findMatch = function(frand) {
+    // empty array 
     var differences = [];
 
+
+    // all friends are looped through
     for (var i = 0; i < friends.length; i++) {
+
+        // Total difference calculation starts at 0
         var totalDifference = 0;
 
+        // loops through array of scores
         for (var j = 0; j < 10; j++) {
+            // total difference will be calculated as the absolute value of friend's scores and users' scores
             totalDifference += Math.abs(friends[i].scores[j] - frand.scores[j]);
 
         }
+
+        // push total difference to empty differences array
         differences.push(totalDifference);
     }
+
+    // index variable starts at 0
     var index = 0;
+    // lowest score is initally determined as the first number in the differences array
     var lowestScore = differences[0];
 
+    // loops through differences array, starting at second variable
     for (var i = 1; i < differences.length; i++) {
+        // if the difference is less the first entry than it is assigned as the lowest score variable and the index is saved in the index variable
         if (differences[i] < lowestScore) {
             lowestScore = differences[i];
             index = i;
         }
     }
 
+    // matched friends variable is determined at the result of this loop
     var matchedFriend = friends[index];
 
+    // function find match returns the friend result
     return matchedFriend;
 
 
